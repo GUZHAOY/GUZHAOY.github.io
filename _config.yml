@@ -1,3 +1,54 @@
 remote_theme: pages-themes/modernist@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+title: GUZHAOY
+description: STUDY
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <头>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <元名称=“视口” 内容=“宽度=设备宽度，初始比例=1，用户可扩展=否">
+
+    <!--[如果 lt IE 9]>
+<script src=“//html5shiv.googlecode.com/svn/trunk/html5.js”></script>
+<![恩迪夫]-->
+
+{% 包括头部自定义.html %}
+  </头>
+  <身体>
+    <div 类=“包装器">
+      <标头 {% 除非 site.description 或 site.github.project_tagline %} class=“without-description” {% endexcept  %}>
+        <h1>{{ site.title | default： site.github.repository_name }}</h1>
+{% 如果 site.description 或 site.github.project_tagline %}
+          <p>{{ site.description | default： site.github.project_tagline }}</p>
+{% endif %}
+        <p class=“view”><a href=“{{ site.github.repository_url }}”>View the Project on GitHub <small>{{ github_name }}</small></a></p >
+        <UL>
+{% 如果site.show_downloads %}
+          <li><a href=“{{ site.github.zip_url }}”>Download <strong>ZIP File</strong></a></li>
+          <li><a href=“{{ site.github.tar_url }}”>Download <strong>TAR Ball</strong></a></li>
+{% endif %}
+          <li><a href=“{{ site.github.repository_url }}”>View On <strong>GitHub</strong></a></li>
+        </UL>
+      </页眉>
+      <部分>
+
+{{ 内容 }}
+
+      </部分>
+    </迪夫>
+    <页脚>
+{% 如果site.github.is_project_page %}
+      <p>Project 由 <a href=“{{ site.github.owner_url }}”>{{ site.github.owner_name }}</a></p>
+{% endif %}
+      <p>托管在 GitHub Pages &mdash;主题由 <a href=“https://github.com/orderedlist”>orderedlist</a></p>
+    </页脚>
+    <!--[如果 ！IE]><script>fixScale（document）;</script><！[恩迪夫]-->
+  </身体>
+</.html>
